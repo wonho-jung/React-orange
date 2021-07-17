@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-
+import Posts from './components/Posts';
+import { sortData } from './components/util';
 export function App() {
+  const [data, setData] = useState('');
   const [Loading, setLoading] = useState(true);
 
   //fetch express API and stored on data.
@@ -9,7 +11,8 @@ export function App() {
     await fetch('http://localhost:4000/posts')
       .then((results) => results.json())
       .then((results) => {
-        console.log(results);
+        const sortedData = sortData(results);
+        setData(sortedData);
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
@@ -18,5 +21,5 @@ export function App() {
   useEffect(() => {
     getAPI();
   }, []);
-  return <div>{Loading ? <h1>Loading...</h1> : <h1>hi</h1>}</div>;
+  return <div>{Loading ? <h1>Loading...</h1> : <Posts data={data} />}</div>;
 }
