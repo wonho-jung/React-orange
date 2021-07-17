@@ -1,9 +1,11 @@
 import React from 'react';
 import Post from './Post';
+import styled from 'styled-components';
+
 function Posts({ data }) {
   console.log(data);
   return (
-    <div>
+    <PostsContainer>
       test
       {data.map((item) => (
         <Post
@@ -15,8 +17,13 @@ function Posts({ data }) {
           publishData={item.publishedAt}
         />
       ))}
-    </div>
+    </PostsContainer>
   );
 }
 
 export default Posts;
+
+const PostsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
