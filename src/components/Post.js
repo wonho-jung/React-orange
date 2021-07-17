@@ -42,12 +42,14 @@ function Post({ title, body, author, publishData, setNewdata, data }) {
       </h3>
       <p className="fontWhite">Date:{publishData}</p>
       <h4 className="fontWhite"> Summary: {summary && summary[0].substr(1)}</h4>
-      <div
-        style={{ display: block }}
-        dangerouslySetInnerHTML={{
-          __html: markdown.toHTML(body),
-        }}
-      />
+      {body && (
+        <div
+          style={{ display: block }}
+          dangerouslySetInnerHTML={{
+            __html: markdown.toHTML(body),
+          }}
+        />
+      )}
     </PostContainer>
   );
 }

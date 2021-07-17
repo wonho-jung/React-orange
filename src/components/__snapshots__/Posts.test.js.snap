@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts component matchs the snapshot 1`] = `
+<div
+  className="sc-gtsrHT iUuxbj"
+>
+  <h1>
+    Sorry Refresh your page :(
+  </h1>
+</div>
+`;

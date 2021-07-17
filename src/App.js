@@ -14,7 +14,7 @@ export function App() {
         const sortedData = sortData(results);
         setData(sortedData);
       })
-      .catch((err) => console.log(err))
+      .catch((err) => alert(err.message))
       .finally(() => setLoading(false));
   };
   //get data when componentDidMount

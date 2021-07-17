@@ -8,17 +8,19 @@ function Posts({ data }) {
 
   return (
     <PostsContainer>
-      {newdata.map((item) => (
-        <Post
-          data={newdata}
-          setNewdata={setNewdata}
-          key={item.id}
-          title={item.title}
-          body={item.body}
-          author={item.author.name}
-          publishData={item.publishedAt}
-        />
-      ))}
+      {data &&
+        newdata.map((item) => (
+          <Post
+            data={newdata}
+            setNewdata={setNewdata}
+            key={item.id}
+            title={item.title}
+            body={item.body}
+            author={item.author.name}
+            publishData={item.publishedAt}
+          />
+        ))}
+      {!data && <h1>Sorry Refresh your page :(</h1>}
     </PostsContainer>
   );
 }

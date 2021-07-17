@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post component matchs the snapshot 1`] = `
+<div
+  className="sc-bdnxRM jBSNjv"
+>
+  <h1
+    className="fontWhite cursor"
+    onClick={[Function]}
+  >
+    Title:
+    title
+  </h1>
+  <h3
+    className="fontWhite cursor"
+    onClick={[Function]}
+  >
+    Author:
+    author
+  </h3>
+  <p
+    className="fontWhite"
+  >
+    Date:
+    2012
+  </p>
+  <h4
+    className="fontWhite"
+  >
+     Summary: 
+    ody
+  </h4>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>body</p>",
+      }
+    }
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+</div>
+`;
